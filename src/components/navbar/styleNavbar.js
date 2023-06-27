@@ -5,11 +5,12 @@ EL ORDEN DE LOS ESTILOS ESTA ORDENADO SEGUN EL ORDEN
 DEL LOS ELEMENTOS DECLARADOS EN EL COMPONENTE (Navbar.jsx)
 */
 export const Nav = styled("nav")(({ theme }) => ({
-  width: "100%",
   height: "auto",
   display: "flex",
+  marginLeft: "auto",
   alignItems: "center",
   flexDirection: "column",
+  width: "calc(100% - 60px)",
   justifyContent: "space-between",
   boxShadow: "0 3px 10px rgb(0 0 0 / 0.2)",
   // ESTILO RESPONSIVO
@@ -17,6 +18,7 @@ export const Nav = styled("nav")(({ theme }) => ({
     height: "60px",
     padding: "0 20px",
     flexDirection: "row",
+    width: "calc(100% - 240px)",
   },
 }));
 

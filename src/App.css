@@ -31,6 +31,10 @@ img {
   object-fit: cover;
 }
 
+hr {
+  border: 0.5px solid #ddd;
+}
+
 /* FORMIK ERROR-MESSAGE ESTILO */
 .error-message {
   color: tomato;

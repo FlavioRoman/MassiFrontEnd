@@ -7,12 +7,20 @@ import LoginForm from "./components/login/LoginForm";
 
 // ESTILO
 import "./App.css";
+import Sidebar from "./components/sidebar/Sidebar";
+import TerminosCondiciones from "./components/TerminosCondiciones/TerminosCondiciones";
+import PoliticaPrivacidad from "./components/politicaPrivacidad/PoliticaPrivacidad";
+import Tablero from "./components/Tablero/Tablero";
 
 function App() {
   return (
     <>
-      <Navbar />
       <LoginForm />
+      {/* <Navbar />
+      <Sidebar />
+      <Tablero />
+      <PoliticaPrivacidad />
+      <TerminosCondiciones /> */}
     </>
     // <BrowserRouter>
     //   <Router>

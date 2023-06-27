@@ -5,11 +5,11 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import {
   Logo,
   Title,
+  Message,
   Section,
   Welcome,
   Content,
   Ilustration,
-  Message,
 } from "./styleLogin";
 import { initialValues, validationSchema } from "./utils/validationForm";
 
