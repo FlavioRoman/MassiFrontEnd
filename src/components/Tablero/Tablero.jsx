@@ -25,7 +25,10 @@ import {
   DocumentReview,
   ReviewSubTitle,
   TeamWorkTitle,
+  CardNumber,
+  CardText,
 } from "./styleTablero";
+import Calificados from "./Calificados/Calificados";
 
 const Tablero = () => {
   return (
@@ -46,29 +49,29 @@ const Tablero = () => {
           <BoxCard>
             <Card>
               <PersonIcon
-                style={{ fill: "#7659A0", width: "40px", height: "40px" }}
+                style={{ fill: "#7659A0", width: "60px", height: "60px" }}
               />
               <CardContent>
-                <h1>91</h1>
-                <p>Candidatos Activos</p>
+                <CardNumber>91</CardNumber>
+                <CardText>Candidatos Activos</CardText>
               </CardContent>
             </Card>
             <Card>
               <MessageIcon
-                style={{ fill: "#F9B438", width: "40px", height: "40px" }}
+                style={{ fill: "#F9B438", width: "60px", height: "60px" }}
               />
               <CardContent>
-                <h1>3</h1>
-                <p>Mensajes Nuevos</p>
+                <CardNumber>3</CardNumber>
+                <CardText>Mensajes Nuevos</CardText>
               </CardContent>
             </Card>
             <Card>
               <AssignmentIcon
-                style={{ fill: "#055B5A", width: "40px", height: "40px" }}
+                style={{ fill: "#055B5A", width: "60px", height: "60px" }}
               />
               <CardContent>
-                <h1>83</h1>
-                <p>Postulaciones a revisar</p>
+                <CardNumber>83</CardNumber>
+                <CardText>Postulaciones a revisar</CardText>
               </CardContent>
             </Card>
           </BoxCard>
@@ -99,6 +102,7 @@ const Tablero = () => {
           </BoxList>
         </TeamWork>
       </Flex>
+      <Calificados></Calificados>
     </Section>
   );
 };

@@ -19,7 +19,9 @@ function App() {
       <Navbar />
       <Sidebar />
       <Tablero />
-      <PoliticaPrivacidad />
+      <Tablero />
+      <Tablero />
+      {/* <PoliticaPrivacidad /> */}
       {/* <TerminosCondiciones /> */}
     </>
     // <BrowserRouter>

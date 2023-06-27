@@ -2,10 +2,12 @@ import { styled } from "@mui/material";
 
 export const Section = styled("section")(({ theme }) => ({
   padding: "20px",
+  marginTop: "20px",
   marginLeft: "auto",
   borderRadius: "20px",
   width: "calc(100% - 60px)",
-  //   boxShadow: "0 3px 10px rgb(0 0 0 / 0.2)",
+  fontFamily: "'Comfortaa', cursive",
+  boxShadow: "0 3px 10px rgb(0 0 0 / 0.2)",
   [theme.breakpoints.up("md")]: {
     width: "calc(100% - 240px)",
   },
@@ -13,6 +15,9 @@ export const Section = styled("section")(({ theme }) => ({
 
 export const Title = styled("h1")({
   color: "#C6351D",
+  margin: "20px 0",
+  fontWeight: "700",
+  fontSize: "2.2rem",
 });
 
 export const List = styled("ul")(({ theme }) => ({
@@ -30,7 +35,7 @@ export const List = styled("ul")(({ theme }) => ({
 
 export const Item = styled("ul")(({ theme }) => ({
   cursor: "pointer",
-  padding: "5px 10px",
+  padding: "10px 15px",
   borderRadius: "20px",
   border: "1px solid #EAEDF0",
   boxShadow: "0 3px 10px rgb(0 0 0 / 0.2)",
@@ -41,37 +46,49 @@ export const DocumentReview = styled("article")(({ theme }) => ({
 }));
 
 export const ReviewTitle = styled("h5")(({ theme }) => ({
+  margin: "5px 0",
   color: "#C6351D",
-  fontSize: "12px",
   fontWeight: "400",
+  fontSize: "1.3rem",
 }));
 
 export const ReviewSubTitle = styled("h3")(({ theme }) => ({
   color: "#000000",
   fontWeight: "400",
+  fontSize: "1.8rem",
 }));
 
 export const BoxCard = styled("article")(({ theme }) => ({
   display: "flex",
   flexWrap: "wrap",
+  marginTop: "5px",
   columnGap: "10px",
   alignItems: "center",
 }));
 
 export const Card = styled("div")(({ theme }) => ({
-  height: "110px",
+  height: "150px",
   display: "flex",
   maxWidth: "300px",
   columnGap: "10px",
   marginTop: "10px",
   alignItems: "center",
   backgroundColor: "#F9FAFB",
-  boxShadow: "0 3px 10px rgb(0 0 0 / 0.2)",
   padding: "20px",
 }));
 
 export const CardContent = styled("div")(({ theme }) => ({
   marginTop: "10px",
+}));
+
+export const CardNumber = styled("h1")(({ theme }) => ({
+  fontSize: "2.4rem",
+  fontWeight: "700",
+  textAlign: "center",
+}));
+
+export const CardText = styled("p")(({ theme }) => ({
+  fontSize: "1.2rem",
 }));
 
 export const TeamWork = styled("div")(({ theme }) => ({
@@ -99,9 +116,11 @@ export const TeamList = styled("ul")(({ theme }) => ({
 }));
 
 export const AvatarImg = styled("img")(({ theme }) => ({
-  width: "60px",
-  height: "60px",
+  width: "80px",
+  height: "80px",
 }));
+
+// ESTILO COMPONENTE CALIFICADOS
 
 // RESPONSIVE
 export const Flex = styled("div")(({ theme }) => ({
