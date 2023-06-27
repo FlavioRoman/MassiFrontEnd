@@ -15,12 +15,12 @@ import Tablero from "./components/Tablero/Tablero";
 function App() {
   return (
     <>
-      <LoginForm />
-      {/* <Navbar />
+      {/* <LoginForm /> */}
+      <Navbar />
       <Sidebar />
       <Tablero />
       <PoliticaPrivacidad />
-      <TerminosCondiciones /> */}
+      <TerminosCondiciones />
     </>
     // <BrowserRouter>
     //   <Router>
