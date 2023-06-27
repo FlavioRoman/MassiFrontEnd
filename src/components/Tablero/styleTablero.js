@@ -21,11 +21,12 @@ export const Title = styled("h1")({
 });
 
 export const List = styled("ul")(({ theme }) => ({
+  gap: "5px",
   display: "flex",
+  flexWrap: "wrap",
+  marginTop: "10px",
   alignItems: "center",
   justifyContent: "space-between",
-  marginTop: "10px",
-  columnGap: "5px",
   [theme.breakpoints.up("md")]: {
     marginTop: "0",
     flexDirection: "row",
