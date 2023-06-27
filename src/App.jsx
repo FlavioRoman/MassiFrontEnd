@@ -8,9 +8,9 @@ import LoginForm from "./components/login/LoginForm";
 // ESTILO
 import "./App.css";
 import Sidebar from "./components/sidebar/Sidebar";
-import TerminosCondiciones from "./components/TerminosCondiciones/TerminosCondiciones";
 import PoliticaPrivacidad from "./components/politicaPrivacidad/PoliticaPrivacidad";
 import Tablero from "./components/Tablero/Tablero";
+// import TerminosCondiciones from "./components/terminosCondiciones/TerminosCondiciones";
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
       <Sidebar />
       <Tablero />
       <PoliticaPrivacidad />
-      <TerminosCondiciones />
+      {/* <TerminosCondiciones /> */}
     </>
     // <BrowserRouter>
     //   <Router>
