@@ -98,7 +98,9 @@ const Navbar = () => {
         {/* LISTA DROPDOWN */}
         {show.avatar && (
           <ListMenu>
-            <Option>
+            <Option>Cuenta</Option>
+            <Option>Cerrar sesión</Option>
+            {/* <Option>
               Editando <CreateIcon />
             </Option>
             <Option>
@@ -109,7 +111,7 @@ const Navbar = () => {
             </Option>
             <Option>
               Descartar <DeleteIcon />
-            </Option>
+            </Option> */}
           </ListMenu>
         )}
       </InteractiveContent>

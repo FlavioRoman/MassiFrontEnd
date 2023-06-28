@@ -3,13 +3,14 @@ import { styled } from "@mui/material";
 export const Section = styled("section")(({ theme }) => ({
   padding: "20px",
   marginTop: "20px",
+  marginRight: "1%",
   marginLeft: "auto",
   borderRadius: "20px",
-  width: "calc(100% - 60px)",
+  width: "calc(98% - 60px)",
   fontFamily: "'Comfortaa', cursive",
   boxShadow: "0 3px 10px rgb(0 0 0 / 0.2)",
   [theme.breakpoints.up("md")]: {
-    width: "calc(100% - 240px)",
+    width: "calc(98% - 240px)",
   },
 }));
 

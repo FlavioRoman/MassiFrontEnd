@@ -3,14 +3,15 @@ import { BrowserRouter, Router, Route } from "react-router-dom";
 // COMPONENTES
 import Home from "./page/home";
 import Navbar from "./components/navbar/Navbar";
+import Tablero from "./components/Tablero/Tablero";
+import Sidebar from "./components/sidebar/Sidebar";
 import LoginForm from "./components/login/LoginForm";
+import Revision from "./components/Revision/Revision";
+import PoliticaPrivacidad from "./components/politicaPrivacidad/PoliticaPrivacidad";
+// import TerminosCondiciones from "./components/terminosCondiciones/TerminosCondiciones";
 
 // ESTILO
 import "./App.css";
-import Sidebar from "./components/sidebar/Sidebar";
-import PoliticaPrivacidad from "./components/politicaPrivacidad/PoliticaPrivacidad";
-import Tablero from "./components/Tablero/Tablero";
-// import TerminosCondiciones from "./components/terminosCondiciones/TerminosCondiciones";
 
 function App() {
   return (
@@ -21,7 +22,8 @@ function App() {
       <Tablero />
       <Tablero />
       <Tablero />
-      {/* <PoliticaPrivacidad /> */}
+      <Revision />
+      <PoliticaPrivacidad />
       {/* <TerminosCondiciones /> */}
     </>
     // <BrowserRouter>
