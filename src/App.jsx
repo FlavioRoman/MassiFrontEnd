@@ -1,36 +1,47 @@
-import { BrowserRouter, Router, Route } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 // COMPONENTES
 import Home from "./page/home";
 import Navbar from "./components/navbar/Navbar";
+import Perfil from "./components/Perfil/Perfil";
 import Tablero from "./components/Tablero/Tablero";
 import Sidebar from "./components/sidebar/Sidebar";
 import LoginForm from "./components/login/LoginForm";
 import Revision from "./components/Revision/Revision";
+import Dashboard from "./components/dashboard/DashBoard";
+import TerminosCondiciones from "./components/terminosCondiciones/TerminosCondiciones";
 import PoliticaPrivacidad from "./components/politicaPrivacidad/PoliticaPrivacidad";
-// import TerminosCondiciones from "./components/terminosCondiciones/TerminosCondiciones";
 
 // ESTILO
 import "./App.css";
 
 function App() {
   return (
-    <>
-      {/* <LoginForm /> */}
-      <Navbar />
-      <Sidebar />
-      <Tablero />
-      <Tablero />
-      <Tablero />
-      <Revision />
-      <PoliticaPrivacidad />
-      {/* <TerminosCondiciones /> */}
-    </>
-    // <BrowserRouter>
-    //   <Router>
-    //     <Route path="Home" element={<Home></Home>} />
-    //   </Router>
-    // </BrowserRouter>
+    // :::SOLO UTILIZADO PARA VER CADA COMPONENTE DE FORMA INDIVIDUAL:::
+    // <>
+    //   <LoginForm />
+    //   <Navbar />
+    //   <Sidebar />
+    //   <Tablero />
+    //   <Tablero />
+    //   <Tablero />
+    //   <Revision />
+    //   <Perfil/>
+    //   <PoliticaPrivacidad />
+    //   <TerminosCondiciones />
+    // </>
+    // :::SOLO UTILIZANDO PARA COMPROBAR EL FUNCIONAMIENTO DE LAS RUTAS:::
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Dashboard />}>
+          <Route path="tablero" element={<Tablero />} />
+          <Route path="revision" element={<Revision />} />
+          <Route />
+          <Route path="terminosCondiciones" element={<TerminosCondiciones />} />
+          <Route path="políticasPrivacidad" element={<PoliticaPrivacidad />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

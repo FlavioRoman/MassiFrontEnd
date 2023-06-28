@@ -7,13 +7,16 @@ import {
   TableHead,
   TableContainer,
 } from "@mui/material";
-import { Flex } from "../styleTablero";
+// COMPONENTES DE CARPETA COLUMNA
 import Postulante from "./columnas/Postulante";
 import Calificacion from "./columnas/Calificacion";
 import Compatibilidad from "./columnas/Compatibilidad";
-import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+// ESTILOS
+import { ButtonConvocatory, Flex } from "./styleTablero";
+// CALENDARIO
 import { DateCalendar, LocalizationProvider } from "@mui/x-date-pickers";
-import { ButtonConvocatory } from "./styleCalificados";
+// REACT ROUTER
+import { Link } from "react-router-dom";
 
 function createData(name, calories, fat, carbs, protein) {
   return { name, calories, fat, carbs, protein };
@@ -109,11 +112,14 @@ const Calificados = () => {
             </TableBody>
           </Table>
         </TableContainer>
-        <LocalizationProvider dateAdapter={AdapterDayjs}>
+        {/* AQUI VA EL CALENDARIO */}
+        {/* <LocalizationProvider dateAdapter={AdapterDayjs}>
           <DateCalendar />
-        </LocalizationProvider>
+        </LocalizationProvider> */}
       </Flex>
-      <ButtonConvocatory>VER CONVOCATORIA</ButtonConvocatory>
+      <Link to="/revision">
+        <ButtonConvocatory>VER CONVOCATORIA</ButtonConvocatory>
+      </Link>
     </>
   );
 };

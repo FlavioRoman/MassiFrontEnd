@@ -1,11 +1,12 @@
+// ESTILOS
 import {
-  Section,
-  Title,
-  Article,
-  SubTitle,
   Text,
   List,
   Item,
+  Title,
+  Article,
+  Section,
+  SubTitle,
 } from "./styleTerminoesCondiciones";
 
 const TerminosCondiciones = () => {

@@ -1,7 +1,7 @@
 // IMAGENES
-import avatar01 from "../../../../assets/GroupBoard1.png";
+import avatar01 from "../../../assets/GroupBoard1.png";
 // ESTILOS
-import { AvatarImg, BoxApplicant } from "./styleColumnas";
+import { AvatarImg, BoxApplicant } from "../styleTablero";
 
 const Postulante = () => {
   return (

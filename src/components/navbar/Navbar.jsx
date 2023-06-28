@@ -1,11 +1,7 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 // ICONOS
 import AddIcon from "@mui/icons-material/Add";
-import SendIcon from "@mui/icons-material/Send";
 import MenuIcon from "@mui/icons-material/Menu";
-import CreateIcon from "@mui/icons-material/Create";
-import DeleteIcon from "@mui/icons-material/Delete";
-import ArchiveIcon from "@mui/icons-material/Archive";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
@@ -66,12 +62,6 @@ const Navbar = () => {
       <Menu>
         {/* AQUI MOSTRARA LA RUTA DE LA SECCION ACTUAL Y ANTERIOR */}
         <Path>
-          <History>
-            Tablero <ArrowForwardIosIcon />
-          </History>
-          <History>
-            Tablero <ArrowForwardIosIcon />
-          </History>
           <History>
             Tablero <ArrowForwardIosIcon />
           </History>

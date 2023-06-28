@@ -1,7 +1,7 @@
 // ICONO
 import StarIcon from "@mui/icons-material/Star";
 // ESTILO
-import { BoxQualification } from "./styleColumnas";
+import { BoxQualification } from "../styleTablero";
 const Calificacion = () => {
   return (
     <BoxQualification>

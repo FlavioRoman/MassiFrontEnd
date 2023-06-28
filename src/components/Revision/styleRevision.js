@@ -32,19 +32,19 @@ export const Option = styled("div")(({ theme }) => ({
 }));
 
 export const BoxStages = styled("div")(({ theme }) => ({
+  rowGapap: "8px",
   display: "flex",
   flexWrap: "wrap",
-  alignItems: "center",
-  justifyContent: "space-between",
   marginTop: "20px",
-  gap: "8px",
+  alignItems: "center",
+  justifyContent: "center",
 }));
 
 export const Stages = styled("div")(({ theme }) => ({
   color: "#fff",
-  margin: "auto",
+  // margin: "auto",
   padding: "10px",
-  minWidth: "230px",
+  width: "230px",
   minHeight: "70px",
   alignItems: "center",
   justifyContent: "center",
@@ -84,7 +84,35 @@ export const Candidates = styled("div")({
   flexDirection: "column",
 });
 
-// CARD STYLE
+// RESULTADO FILTRO ESTILO
+export const BoxResultFilter = styled("div")({
+  display: "flex",
+  margin: "30px 0",
+  columnGap: "20px",
+  justifyContent: "center",
+});
+export const All = styled("div")({
+  display: "flex",
+  alignItems: "center",
+  flexDirection: "column",
+});
+export const Pending = styled("div")({
+  display: "flex",
+  alignItems: "center",
+  flexDirection: "column",
+});
+export const Approved = styled("div")({
+  display: "flex",
+  alignItems: "center",
+  flexDirection: "column",
+});
+export const Notapproved = styled("div")({
+  display: "flex",
+  alignItems: "center",
+  flexDirection: "column",
+});
+
+// CARD ESTILO
 export const ContainerCard = styled("div")(({ theme }) => ({
   margin: "auto",
   display: "flex",
