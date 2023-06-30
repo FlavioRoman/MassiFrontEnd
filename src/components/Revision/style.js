@@ -19,6 +19,7 @@ export const Article = styled("article")(({ theme }) => ({
   flexWrap: "wrap",
   alignItems: "center",
   justifyContent: "space-between",
+  position: "relative",
 }));
 
 export const Title = styled("div")(({ theme }) => ({
@@ -27,9 +28,33 @@ export const Title = styled("div")(({ theme }) => ({
   alignItems: "center",
 }));
 
-export const Option = styled("div")(({ theme }) => ({
-  cursor: "pointer",
+export const ListMenu = styled("div")(({ theme }) => ({
+  left: 0,
+  right: 0,
+  top: "130%",
+  width: "100%",
+  position: "absolute",
+  backgroundColor: "#fff",
+  boxShadow: "0 3px 10px rgb(0 0 0 / 0.2)",
+  [theme.breakpoints.up("md")]: {
+    right: 0,
+    left: "initial",
+    marginRight: "auto",
+    width: "300px",
+  },
 }));
+
+export const Option = styled("li")({
+  display: "flex",
+  cursor: "pointer",
+  alignItems: "center",
+  justifyContent: "space-between",
+  padding: "10px",
+  width: "100%",
+  ":hover": {
+    backgroundColor: "#ddd",
+  },
+});
 
 export const BoxStages = styled("div")(({ theme }) => ({
   rowGapap: "8px",
@@ -42,9 +67,8 @@ export const BoxStages = styled("div")(({ theme }) => ({
 
 export const Stages = styled("div")(({ theme }) => ({
   color: "#fff",
-  // margin: "auto",
-  padding: "10px",
   width: "230px",
+  padding: "10px",
   minHeight: "70px",
   alignItems: "center",
   justifyContent: "center",
@@ -89,6 +113,8 @@ export const BoxResultFilter = styled("div")({
   display: "flex",
   margin: "30px 0",
   columnGap: "20px",
+  flexWrap: "wrap",
+  rowGap: "10px",
   justifyContent: "center",
 });
 export const All = styled("div")({

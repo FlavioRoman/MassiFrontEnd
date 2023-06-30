@@ -2,18 +2,21 @@
 import StarIcon from "@mui/icons-material/Star";
 // ESTILOS
 import {
+  Job,
   Star,
+  Name,
   State,
+  Image,
+  Avatar,
   BoxCard,
   Statistics,
   Percentage,
-  Image,
-  Avatar,
   ButtonProfile,
-  Name,
-  Job,
-} from "./styleRevision";
+} from "./style";
+// IMAGEN
 import avatar01 from "../../assets/GroupBoard1.png";
+// REACT ROUTER
+import { Link } from "react-router-dom";
 
 const Card = () => {
   return (
@@ -33,7 +36,9 @@ const Card = () => {
         <Name>Javier Rivas</Name>
         <Job>Lic. en administración</Job>
       </Avatar>
-      <ButtonProfile type="button">VER PERFIL</ButtonProfile>
+      <Link to="/perfil">
+        <ButtonProfile type="button">VER PERFIL</ButtonProfile>
+      </Link>
     </BoxCard>
   );
 };

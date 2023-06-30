@@ -1,6 +1,7 @@
 import { styled } from "@mui/material";
 
-export const Section = styled("section")(({ theme }) => ({
+// :::::ESTILOS GLOBALES:::::
+export const Container = styled("section")(({ theme }) => ({
   marginTop: "20px",
   marginRight: "1%",
   marginLeft: "auto",
@@ -13,6 +14,11 @@ export const Section = styled("section")(({ theme }) => ({
   },
 }));
 
+export const Avatar = styled("img")({
+  width: "100px",
+  height: "100px",
+});
+
 export const State = styled("article")({
   color: "#fff",
   padding: "20px",
@@ -23,8 +29,23 @@ export const State = styled("article")({
   cursor: "pointer",
 });
 
-export const BoxPeople = styled("article")({
+export const Flex = styled("div")(({ theme }) => ({
   display: "flex",
+  flexDirection: "column",
+  alignItems: "flex-start",
+  [theme.breakpoints.up("md")]: {
+    flexDirection: "row",
+  },
+}));
+
+// ESTILO CARD
+export const Card = styled("div")({
+  height: "150px",
+  display: "flex",
+  maxWidth: "300px",
+  columnGap: "10px",
+  marginTop: "10px",
   alignItems: "center",
-  justifyContent: "space-between",
+  backgroundColor: "#F9FAFB",
+  padding: "20px",
 });

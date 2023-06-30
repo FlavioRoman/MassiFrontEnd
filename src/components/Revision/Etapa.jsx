@@ -4,23 +4,28 @@ import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 // ESTILOS
 import {
   Title,
-  Option,
   Stages,
+  Option,
   Section,
   Article,
+  ListMenu,
   BoxStages,
   ButtonCloseStage,
-} from "./styleRevision";
+} from "./style";
+// HOOK
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const etapas = [
-  { text: "Revisión de documentos", bgColor: "#055B5A" },
-  { text: "Entrevista 1", bgColor: "#E25139" },
-  { text: "Evaluación", bgColor: "#F9B438" },
-  { text: "Entrevista 2", bgColor: "#7659A0" },
-  { text: "Decisión Final", bgColor: "#055B5A" },
+  { text: "Revisión de documentos", bgColor: "#055B5A", path: "#" },
+  { text: "Entrevista 1", bgColor: "#E25139", path: "/revision" },
+  { text: "Evaluación", bgColor: "#F9B438", path: "#" },
+  { text: "Entrevista 2", bgColor: "#7659A0", path: "#" },
+  { text: "Decisión Final", bgColor: "#055B5A", path: "#" },
 ];
 
 const Etapa = () => {
+  const [show, setShow] = useState(false);
   return (
     <Section>
       <Article>
@@ -28,16 +33,24 @@ const Etapa = () => {
           <ArrowBackIosIcon />
           Auxiliar Administrativo
         </Title>
-        <Option>
+        <button onClick={() => setShow(!show)}>
           <MoreHorizIcon />
-        </Option>
+        </button>
+        {show && (
+          <ListMenu>
+            <Option>Configuración de convocatoria</Option>
+            <Option>Cerrar etapa 1</Option>
+          </ListMenu>
+        )}
       </Article>
       <BoxStages>
         {etapas.map((value, index) => {
           return (
-            <Stages sx={{ backgroundColor: `${value.bgColor}}` }} key={index}>
-              {value.text}
-            </Stages>
+            <Link key={index} to={`${value.path}`}>
+              <Stages sx={{ backgroundColor: `${value.bgColor}}` }} key={index}>
+                {value.text}
+              </Stages>
+            </Link>
           );
         })}
       </BoxStages>

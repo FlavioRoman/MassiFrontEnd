@@ -19,7 +19,7 @@ import {
   InteractiveContent,
   History,
   Menu,
-} from "./styleNavbar";
+} from "./style";
 
 // OBJETO ESTILO.
 const iconStyle = {
@@ -90,18 +90,6 @@ const Navbar = () => {
           <ListMenu>
             <Option>Cuenta</Option>
             <Option>Cerrar sesión</Option>
-            {/* <Option>
-              Editando <CreateIcon />
-            </Option>
-            <Option>
-              Archivar <ArchiveIcon />
-            </Option>
-            <Option>
-              Publicar <SendIcon />
-            </Option>
-            <Option>
-              Descartar <DeleteIcon />
-            </Option> */}
           </ListMenu>
         )}
       </InteractiveContent>

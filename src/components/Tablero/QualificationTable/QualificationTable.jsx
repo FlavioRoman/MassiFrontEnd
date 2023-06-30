@@ -1,3 +1,4 @@
+// MATERIAL UI
 import {
   Paper,
   Table,
@@ -6,17 +7,20 @@ import {
   TableCell,
   TableHead,
   TableContainer,
+  Grid,
 } from "@mui/material";
-// COMPONENTES DE CARPETA COLUMNA
-import Postulante from "./columnas/Postulante";
-import Calificacion from "./columnas/Calificacion";
-import Compatibilidad from "./columnas/Compatibilidad";
-// ESTILOS
-import { ButtonConvocatory, Flex } from "./styleTablero";
-// CALENDARIO
-import { DateCalendar, LocalizationProvider } from "@mui/x-date-pickers";
+
+// COMPONENTES
+import Applicant from "./columns/Applicant";
+import ViewButton from "../../Buttons/ViewButton";
+import Qualification from "./columns/Qualification";
+import Compatibility from "./columns/Compatibility";
+
 // REACT ROUTER
 import { Link } from "react-router-dom";
+
+// CALENDARIO
+// import { DateCalendar, LocalizationProvider } from "@mui/x-date-pickers";
 
 function createData(name, calories, fat, carbs, protein) {
   return { name, calories, fat, carbs, protein };
@@ -28,13 +32,14 @@ const rows = [
   createData(3, 262, 16.0, 24, 6.0),
 ];
 
-const Calificados = () => {
+// COMPONENTE PARA LA TABLA DE CALIFICADOS.
+const QualificationTable = () => {
   return (
     <>
-      <Flex>
+      <Grid container>
         <TableContainer
-          sx={{ marginTop: "20px", boxShadow: "none" }}
           component={Paper}
+          sx={{ marginTop: "20px", boxShadow: "none" }}
         >
           <Table sx={{ minWidth: 650 }} aria-label="simple table">
             <TableHead>
@@ -42,7 +47,7 @@ const Calificados = () => {
                 <TableCell
                   align="center"
                   sx={{
-                    fontSize: "1.3rem",
+                    fontSize: "1.2rem",
                     fontWeight: "300",
                     color: "#575D64",
                   }}
@@ -52,7 +57,7 @@ const Calificados = () => {
                 <TableCell
                   align="center"
                   sx={{
-                    fontSize: "1.3rem",
+                    fontSize: "1.2rem",
                     fontWeight: "300",
                     color: "#575D64",
                   }}
@@ -62,7 +67,7 @@ const Calificados = () => {
                 <TableCell
                   align="left"
                   sx={{
-                    fontSize: "1.3rem",
+                    fontSize: "1.2rem",
                     fontWeight: "300",
                     color: "#575D64",
                   }}
@@ -72,7 +77,7 @@ const Calificados = () => {
                 <TableCell
                   align="left"
                   sx={{
-                    fontSize: "1.3rem",
+                    fontSize: "1.2rem",
                     fontWeight: "300",
                     color: "#575D64",
                   }}
@@ -97,15 +102,15 @@ const Calificados = () => {
                   </TableCell>
                   {/* POSTULANTE */}
                   <TableCell align="left">
-                    <Postulante />
+                    <Applicant />
                   </TableCell>
                   {/* CALIFICACION */}
                   <TableCell align="left">
-                    <Calificacion />
+                    <Qualification />
                   </TableCell>
                   {/* COMPATIBILIDAD */}
                   <TableCell align="left">
-                    <Compatibilidad />
+                    <Compatibility />
                   </TableCell>
                 </TableRow>
               ))}
@@ -114,14 +119,14 @@ const Calificados = () => {
         </TableContainer>
         {/* AQUI VA EL CALENDARIO */}
         {/* <LocalizationProvider dateAdapter={AdapterDayjs}>
-          <DateCalendar />
-        </LocalizationProvider> */}
-      </Flex>
+            <DateCalendar />
+          </LocalizationProvider> */}
+      </Grid>
       <Link to="/revision">
-        <ButtonConvocatory>VER CONVOCATORIA</ButtonConvocatory>
+        <ViewButton text={"VER CONVOCATORIA"} />
       </Link>
     </>
   );
 };
 
-export default Calificados;
+export default QualificationTable;

@@ -9,6 +9,7 @@ import Sidebar from "./components/sidebar/Sidebar";
 import LoginForm from "./components/login/LoginForm";
 import Revision from "./components/Revision/Revision";
 import Dashboard from "./components/dashboard/DashBoard";
+import Entrevista01 from "./components/Entrevista01/Entrevista01";
 import TerminosCondiciones from "./components/terminosCondiciones/TerminosCondiciones";
 import PoliticaPrivacidad from "./components/politicaPrivacidad/PoliticaPrivacidad";
 
@@ -36,7 +37,8 @@ function App() {
         <Route path="/" element={<Dashboard />}>
           <Route path="tablero" element={<Tablero />} />
           <Route path="revision" element={<Revision />} />
-          <Route />
+          <Route path="perfil" element={<Perfil />} />
+          <Route path="entrevista01" element={<Entrevista01 />} />
           <Route path="terminosCondiciones" element={<TerminosCondiciones />} />
           <Route path="políticasPrivacidad" element={<PoliticaPrivacidad />} />
         </Route>

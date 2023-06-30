@@ -1,6 +1,6 @@
 import Image01 from "../../assets/Vector.png";
-import Image02 from "../../assets/Vector-1.png";
-import Image03 from "../../assets/Vector-2.png";
+// import Image02 from "../../assets/Vector-1.png";
+// import Image03 from "../../assets/Vector-2.png";
 
 import { styled } from "@mui/material";
 

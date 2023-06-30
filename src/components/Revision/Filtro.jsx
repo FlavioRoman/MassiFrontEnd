@@ -21,7 +21,7 @@ import {
   Pending,
   Approved,
   Notapproved,
-} from "./styleRevision";
+} from "./style";
 // COMPONENTE
 import Card from "./Card";
 

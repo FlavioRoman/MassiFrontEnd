@@ -1,9 +1,5 @@
 import { styled } from "@mui/material";
 
-/*
-EL ORDEN DE LOS ESTILOS ESTA ORDENADO SEGUN EL ORDEN 
-DEL LOS ELEMENTOS DECLARADOS EN EL COMPONENTE (Navbar.jsx)
-*/
 export const Nav = styled("nav")(({ theme }) => ({
   height: "auto",
   display: "flex",
@@ -101,12 +97,13 @@ export const MenuDropDown = styled("div")({
 });
 
 export const ListMenu = styled("ul")(({ theme }) => ({
-  top: "100%",
   right: "0",
+  top: "100%",
   width: "100%",
   position: "absolute",
   backgroundColor: "#fff",
   boxShadow: "0 3px 10px rgb(0 0 0 / 0.2)",
+  zIndex: "10",
   // ESTILO RESPONSIVO
   [theme.breakpoints.up("md")]: {
     width: "190px",
