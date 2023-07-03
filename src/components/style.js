@@ -1,7 +1,8 @@
 import { styled } from "@mui/material";
 
 // :::::ESTILOS GLOBALES:::::
-export const Container = styled("section")(({ theme }) => ({
+export const Section = styled("section")(({ theme }) => ({
+  padding: "20px",
   marginTop: "20px",
   marginRight: "1%",
   marginLeft: "auto",
@@ -29,16 +30,7 @@ export const State = styled("article")({
   cursor: "pointer",
 });
 
-export const Flex = styled("div")(({ theme }) => ({
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "flex-start",
-  [theme.breakpoints.up("md")]: {
-    flexDirection: "row",
-  },
-}));
-
-// ESTILO CARD
+// :::::ESTILO CARD:::::
 export const Card = styled("div")({
   height: "150px",
   display: "flex",
@@ -49,3 +41,38 @@ export const Card = styled("div")({
   backgroundColor: "#F9FAFB",
   padding: "20px",
 });
+
+// :::::ESTILO CHAT BOTON:::::
+export const ContenedorEnviar = styled("div")(({ theme }) => ({
+  display: "flex",
+  alignItems: "center",
+  flexDirection: "row",
+}));
+
+export const Boton = styled("button")(({ theme }) => ({
+  color: "#fff",
+  display: "flex",
+  fontSize: "1rem",
+  alignItems: "center",
+  borderRadius: "16px",
+  backgroundColor: "#E25139",
+  padding: "12px 16px 12px 16px",
+  gap: "10px",
+}));
+
+export const BotonTexto = styled("p")(({ theme }) => ({
+  color: "#fff",
+  display: "none",
+  fontSize: "1rem",
+  alignItems: "center",
+  borderRadius: "16px",
+  backgroundColor: "#E25139",
+  gap: "10px",
+  [theme.breakpoints.up("md")]: {
+    display: "block",
+  },
+}));
+
+export const BotonIcono = styled("span")(({ theme }) => ({
+  color: "#fff",
+}));

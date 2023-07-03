@@ -1,10 +1,14 @@
+// :::::IMAGEN:::::
+import Img from "../../assets/GroupBoard1.png";
+// :::::MATERIAL UI:::::
 import {
   Box,
-  FormControl,
   Grid,
-  InputLabel,
-  MenuItem,
   Select,
+  MenuItem,
+  Typography,
+  InputLabel,
+  FormControl,
 } from "@mui/material";
 import { DemoContainer } from "@mui/x-date-pickers/internals/demo";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
@@ -14,8 +18,12 @@ import {
   TimePicker,
 } from "@mui/x-date-pickers";
 import dayjs from "dayjs";
+// :::::HOOK:::::
 import { useState } from "react";
-import { Container } from "../style";
+// :::::ESTILO:::::
+import { Section } from "../style";
+// :::::COMPONENTE:::::
+import Perfil from "../Global/Perfil";
 
 const DetalleForm = () => {
   const [age, setAge] = useState("");
@@ -26,23 +34,37 @@ const DetalleForm = () => {
   };
 
   return (
-    <Container>
+    <Section>
+      {/* :::::TITULO::::: */}
       <Box>
-        <h5>Detalle Entrevista</h5>
-        <p>
+        <Typography sx={{ fontSize: "16px", fontWeight: 300 }}>
+          Detalle Entrevista
+        </Typography>
+        <Typography
+          sx={{ fontSize: "14px", fontWeight: 300, marginTop: "20px" }}
+        >
           Este puesto requiere de individuos con habilidades comunicativas bien
           desarrolladas, que sean capaces de resolver problemas sobre la marcha
           y que sean team players. Esta entrevista pretende determinar estas
           tres habilidades.
-        </p>
+        </Typography>
       </Box>
-      <Box>
+      <Box sx={{ marginTop: "30px" }}>
         <Grid container>
           <Grid item sm={6}>
-            <h5>A cargo de:</h5>
+            <Typography sx={{ fontSize: "12px", fontWeight: 300 }}>
+              A cargo de:
+            </Typography>
+            <Perfil
+              foto={Img}
+              nombre={"Derlis Cantero"}
+              trabajo={""}
+              direccion={""}
+            />
           </Grid>
           <Grid item sm={6}>
-            {/* SELECCIONAR MODALIDAD */}
+            {/* :::::SELECCIONAR MODALIDAD::::: */}
+
             <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
               <InputLabel id="demo-simple-select-standard-label">
                 Modalidad
@@ -62,7 +84,7 @@ const DetalleForm = () => {
                 <MenuItem value={30}>Thirty</MenuItem>
               </Select>
             </FormControl>
-            {/* SELECCIONAR FECHA */}
+            {/* :::::SELECCIONAR FECHA::::: */}
             <LocalizationProvider dateAdapter={AdapterDayjs}>
               <DemoContainer components={["DatePicker", "DatePicker"]}>
                 <DatePicker
@@ -72,7 +94,7 @@ const DetalleForm = () => {
                 />
               </DemoContainer>
             </LocalizationProvider>
-            {/* SELECCIONAR TIEMPO */}
+            {/* :::::SELECCIONAR TIEMPO::::: */}
             <LocalizationProvider dateAdapter={AdapterDayjs}>
               <DemoContainer components={["TimePicker", "TimePicker"]}>
                 <TimePicker
@@ -84,7 +106,7 @@ const DetalleForm = () => {
           </Grid>
         </Grid>
       </Box>
-    </Container>
+    </Section>
   );
 };
 

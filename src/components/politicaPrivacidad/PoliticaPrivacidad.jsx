@@ -1,12 +1,4 @@
-import {
-  Text,
-  List,
-  Item,
-  Title,
-  Article,
-  Section,
-  SubTitle,
-} from "./stylePoliticaPrivacidad";
+import { Text, List, Item, Title, Article, Section, SubTitle } from "./style";
 
 const PoliticaPrivacidad = () => {
   return (

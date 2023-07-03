@@ -2,9 +2,9 @@
 import { Box, styled } from "@mui/material";
 import TextareaAutosize from "@mui/base/TextareaAutosize";
 // ESTILO
-import { Container } from "../style";
+import { Section } from "../../style";
 // COMPONENTE
-import SaveButton from "../Buttons/SaveButton";
+import SaveButton from "../../Buttons/SaveButton";
 
 const StyledTextarea = styled(TextareaAutosize)({
   width: "100%",
@@ -16,7 +16,7 @@ const StyledTextarea = styled(TextareaAutosize)({
 
 const PreguntasForm = () => {
   return (
-    <Container sx={{ padding: "30px" }}>
+    <Section sx={{ padding: "30px" }}>
       <h5>Preguntas</h5>
       <Box sx={{ width: "100%", marginTop: "50px" }}>
         <h3>1. ¿Qué hace que un equipo funcione bien?</h3>
@@ -36,7 +36,7 @@ const PreguntasForm = () => {
         />
         <SaveButton text={"GUARDAR"}></SaveButton>
       </Box>
-    </Container>
+    </Section>
   );
 };
 

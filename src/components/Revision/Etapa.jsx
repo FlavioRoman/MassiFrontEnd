@@ -1,7 +1,7 @@
-// ICONOS
+// :::::ICONOS:::::
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
-// ESTILOS
+// :::::ESTILOS:::::
 import {
   Title,
   Stages,
@@ -12,10 +12,12 @@ import {
   BoxStages,
   ButtonCloseStage,
 } from "./style";
-// HOOK
+// :::::HOOK:::::
 import { useState } from "react";
+// :::::REACT ROUTER:::::
 import { Link } from "react-router-dom";
 
+// :::::ARRAY PARA LAS ETAPAS:::::
 const etapas = [
   { text: "Revisión de documentos", bgColor: "#055B5A", path: "#" },
   { text: "Entrevista 1", bgColor: "#E25139", path: "/revision" },
@@ -44,6 +46,7 @@ const Etapa = () => {
         )}
       </Article>
       <BoxStages>
+        {/* :::::ITERAR ATREVES DEL ARRAY DE ETAPAS::::: */}
         {etapas.map((value, index) => {
           return (
             <Link key={index} to={`${value.path}`}>

@@ -1,19 +1,21 @@
-// ESTILO
+// :::::ESTILO:::::
 import { Item } from "../style";
-// COMPONENTES
-import TeamWork from "./TeamWork";
-import CardReview from "./CardReview";
-// MATERIAL UI
+// :::::COMPONENTES:::::
+import CardRevision from "./CardRevision";
+import EquipoTrabajo from "./EquipoTrabajo";
+// :::::MATERIAL UI:::::
 import { Box, Grid, Stack, Typography } from "@mui/material";
 
-// COMPONENTE PARA LA SUPERIOR
-const Application = () => {
+// :::::COMPONENTE PARA LA SUPERIOR:::::
+const Puesto = () => {
   return (
     <>
+      {/* :::::TITULO CON INFO SOBRE EL PUESTO::::: */}
       <Box>
         <Grid
           container
           direction="row"
+          sx={{ padding: "0 20px" }}
           justifyContent="space-between"
           alignItems="center"
         >
@@ -40,9 +42,11 @@ const Application = () => {
           </Grid>
         </Grid>
       </Box>
+      {/* :::::ETAPAS::::: */}
       <Box>
         <Typography
           sx={{
+            padding: "0 20px",
             margin: "5px 0",
             color: "#C6351D",
             fontWeight: "400",
@@ -52,18 +56,24 @@ const Application = () => {
           Etapa 1 de 5
         </Typography>
         <Typography
-          sx={{ color: "#000000", fontWeight: "400", fontSize: "1.8rem" }}
+          sx={{
+            color: "#000000",
+            fontWeight: "400",
+            fontSize: "1.8rem",
+            padding: "0 20px",
+          }}
         >
-          Revisión de documentos
+          Revisión de Documentos
         </Typography>
       </Box>
+      {/* :::::REVISION DE DOCUMENTOS (CANDIDATOS ACTIVOS, MENSAJES NUEVOS Y POSTULACIONES A REVISAR) Y (EQUIPO DE TRABAJO)::::: */}
       <Box>
         <Grid container>
           <Grid item sm={12} md={8}>
-            <CardReview />
+            <CardRevision />
           </Grid>
           <Grid item sm={12} md={4}>
-            <TeamWork />
+            <EquipoTrabajo />
           </Grid>
         </Grid>
       </Box>
@@ -71,4 +81,4 @@ const Application = () => {
   );
 };
 
-export default Application;
+export default Puesto;

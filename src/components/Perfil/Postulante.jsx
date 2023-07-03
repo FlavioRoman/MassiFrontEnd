@@ -1,13 +1,13 @@
 import CircularProgress from "@mui/material/CircularProgress";
-// IMAGENES
+// :::::IMAGENES:::::
 import Image from "../../assets/GroupBoard1.png";
 import Link01 from "../../assets/redesmod1.png";
 import Link02 from "../../assets/redesmod2.png";
 import Link03 from "../../assets/redemod3.png";
-// ICONO
+// :::::ICONO:::::
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-// ESTILOS
+// :::::ESTILOS:::::
 import {
   Info,
   Link,
@@ -17,13 +17,14 @@ import {
   People,
   Contact,
   Section,
-  ButtonCv,
   Progress,
   Information,
   SocialNetwork,
 } from "./style";
 // HOOK
 import { useState } from "react";
+// :::::MATERIAL UI:::::
+import { Typography } from "@mui/material";
 
 const Postulante = () => {
   const [progress, setProgress] = useState(73);
@@ -70,9 +71,20 @@ const Postulante = () => {
           organización de eventos.
         </p>
       </Information>
-      <ButtonCv>
-        DESCARGAR CV <ArrowDownwardIcon />
-      </ButtonCv>
+      <Typography
+        sx={{
+          display: "flex",
+          fontWeight: 600,
+          alignItems: "center",
+          justifyContent: "flex-end",
+          cursor: "pointer",
+          color: "#E25139",
+          padding: "20px",
+          gap: "10px",
+        }}
+      >
+        DESCARGAR CV <ArrowDownwardIcon color="#E25139" />
+      </Typography>
     </Section>
   );
 };

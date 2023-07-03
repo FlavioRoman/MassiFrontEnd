@@ -1,5 +1,6 @@
-// MATERIAL UI
+// ::::::MATERIAL UI::::::
 import {
+  Grid,
   Paper,
   Table,
   TableRow,
@@ -7,19 +8,18 @@ import {
   TableCell,
   TableHead,
   TableContainer,
-  Grid,
 } from "@mui/material";
 
-// COMPONENTES
-import Applicant from "./columns/Applicant";
+// ::::::COMPONENTES::::::
+import Postulante from "./columnas/Postulante";
 import ViewButton from "../../Buttons/ViewButton";
-import Qualification from "./columns/Qualification";
-import Compatibility from "./columns/Compatibility";
+import Calificacion from "./columnas/Calificacion";
+import Compatibilidad from "./columnas/Compatibilidad";
 
-// REACT ROUTER
+// ::::::REACT ROUTER::::::
 import { Link } from "react-router-dom";
 
-// CALENDARIO
+// ::::::CALENDARIO::::::
 // import { DateCalendar, LocalizationProvider } from "@mui/x-date-pickers";
 
 function createData(name, calories, fat, carbs, protein) {
@@ -32,8 +32,8 @@ const rows = [
   createData(3, 262, 16.0, 24, 6.0),
 ];
 
-// COMPONENTE PARA LA TABLA DE CALIFICADOS.
-const QualificationTable = () => {
+// :::::COMPONENTE PARA LA TABLA DE CALIFICADOS:::::
+const MejoresCalificados = () => {
   return (
     <>
       <Grid container>
@@ -41,7 +41,8 @@ const QualificationTable = () => {
           component={Paper}
           sx={{ marginTop: "20px", boxShadow: "none" }}
         >
-          <Table sx={{ minWidth: 650 }} aria-label="simple table">
+          <Table sx={{ width: "100%" }} size="small" aria-label="simple table">
+            {/* :::::TIULOS DE LAS COLUMNAS::::: */}
             <TableHead>
               <TableRow>
                 <TableCell
@@ -65,7 +66,7 @@ const QualificationTable = () => {
                   Postulante
                 </TableCell>
                 <TableCell
-                  align="left"
+                  align="center"
                   sx={{
                     fontSize: "1.2rem",
                     fontWeight: "300",
@@ -75,7 +76,7 @@ const QualificationTable = () => {
                   Calificación
                 </TableCell>
                 <TableCell
-                  align="left"
+                  align="center"
                   sx={{
                     fontSize: "1.2rem",
                     fontWeight: "300",
@@ -86,6 +87,7 @@ const QualificationTable = () => {
                 </TableCell>
               </TableRow>
             </TableHead>
+            {/* :::::CONTENIDO DE LAS COLUMNAS::::: */}
             <TableBody>
               {rows.map((row) => (
                 <TableRow
@@ -101,27 +103,28 @@ const QualificationTable = () => {
                     {row.name}
                   </TableCell>
                   {/* POSTULANTE */}
-                  <TableCell align="left">
-                    <Applicant />
+                  <TableCell align="center">
+                    <Postulante />
                   </TableCell>
                   {/* CALIFICACION */}
-                  <TableCell align="left">
-                    <Qualification />
+                  <TableCell align="center">
+                    <Calificacion />
                   </TableCell>
                   {/* COMPATIBILIDAD */}
-                  <TableCell align="left">
-                    <Compatibility />
+                  <TableCell align="center">
+                    <Compatibilidad />
                   </TableCell>
                 </TableRow>
               ))}
             </TableBody>
           </Table>
         </TableContainer>
-        {/* AQUI VA EL CALENDARIO */}
+        {/* ::::: AQUI VA EL CALENDARIO:::::  */}
         {/* <LocalizationProvider dateAdapter={AdapterDayjs}>
             <DateCalendar />
           </LocalizationProvider> */}
       </Grid>
+      {/* :::::BOTON PARA VER LA CONVOCAROTIA::::: */}
       <Link to="/revision">
         <ViewButton text={"VER CONVOCATORIA"} />
       </Link>
@@ -129,4 +132,4 @@ const QualificationTable = () => {
   );
 };
 
-export default QualificationTable;
+export default MejoresCalificados;

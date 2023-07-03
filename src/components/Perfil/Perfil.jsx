@@ -1,10 +1,11 @@
-// COMPONENTES
-import Etapa from "../Revision/Etapa";
-import Chat from "./Chat";
-import Informacion from "./Informacion";
+// :::::COMPONENTES:::::
 import Postulante from "./Postulante";
+import Etapa from "../Revision/Etapa";
 import Referencias from "./Referencias";
+import Informacion from "./Informacion";
+import Chat from "../Global/Chat";
 
+// :::::COMPONENTE PADRE:::::
 const Perfil = () => {
   return (
     <>

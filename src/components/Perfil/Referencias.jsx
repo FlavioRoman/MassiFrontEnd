@@ -1,19 +1,22 @@
-// ICONO
+// :::::ICONO:::::
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-// ESTILOS
+// :::::ESTILOS:::::
 import { Card, ContainerCard, Section } from "./style";
 import { Box, CardContent, Typography } from "@mui/material";
 
+// :::::COMPONENTE PARA REFERENCIAS:::::
 const Referencias = () => {
   return (
     <Section sx={{ boxShadow: "none" }}>
       <h4>Referencias</h4>
       <ContainerCard>
+        {/* :::::ITERAR SOBRE EL ARRAY MOSTRAR LAS 3 REFERENCIAS::::: */}
         {[1, 2, 3].map((value, index) => (
           <Card key={index} sx={{ minWidth: 275 }}>
             <CardContent
               sx={{ display: "flex", justifyContent: "space-between" }}
             >
+              {/* :::::REFERENCIA::::: */}
               <Box>
                 <Typography
                   sx={{ fontSize: 18 }}
@@ -32,6 +35,7 @@ const Referencias = () => {
               </Box>
               <LinkedInIcon />
             </CardContent>
+            {/* :::::INFORMACION::::: */}
             <Typography
               sx={{ mb: 1.5, textAlign: "justify" }}
               color="text.secondary"
@@ -41,6 +45,7 @@ const Referencias = () => {
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex ea commodo consequat.”
             </Typography>
+            {/* :::::FECHA::::: */}
             <Typography
               gutterBottom
               color="text.secondary"

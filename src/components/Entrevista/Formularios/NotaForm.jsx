@@ -2,9 +2,9 @@
 import { Box, styled } from "@mui/material";
 import TextareaAutosize from "@mui/base/TextareaAutosize";
 // ESTILO
-import { Container } from "../style";
+import { Section } from "../../style";
 // COMPONENTE
-import SaveButton from "../Buttons/SaveButton";
+import SaveButton from "../../Buttons/SaveButton";
 
 const StyledTextarea = styled(TextareaAutosize)(
   ({ theme }) => `
@@ -18,17 +18,13 @@ const StyledTextarea = styled(TextareaAutosize)(
 
 const NotaForm = () => {
   return (
-    <Container sx={{ padding: "30px" }}>
+    <Section sx={{ padding: "30px" }}>
       <h5>Notas de la entrevista</h5>
       <Box sx={{ width: "100%", marginTop: "50px" }}>
-        <StyledTextarea
-          minRows={5}
-          aria-label="minimum height"
-          placeholder="Breve Descripción"
-        />
+        <StyledTextarea minRows={5} aria-label="minimum height" />
         <SaveButton text={"GUARDAR"} />
       </Box>
-    </Container>
+    </Section>
   );
 };
 

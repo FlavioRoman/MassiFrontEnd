@@ -94,16 +94,6 @@ export const Information = styled("div")({
   padding: "0 20px",
 });
 
-export const ButtonCv = styled("button")({
-  display: "flex",
-  color: "#E25139",
-  marginLeft: "auto",
-  alignItems: "center",
-  fontFamily: "'Jost', sans-serif",
-  fontWeight: "bold",
-  padding: "20px",
-});
-
 //:::::ESTILO INFORMACION:::::
 export const ContainerCard = styled("div")(({ theme }) => ({
   display: "flex",

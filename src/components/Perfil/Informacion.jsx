@@ -94,15 +94,15 @@ export const Documents = () => {
 const Informacion = () => {
   return (
     <Section sx={{ padding: "20px", boxShadow: "0 3px 10px rgb(0 0 0 / 0.2)" }}>
-      {/* TITULO */}
+      {/* :::::TITULO::::: */}
       <h5 style={{ margin: "20px 0" }}>Información del postulante</h5>
-      {/* COMPONENTE EDUCACION */}
+      {/* :::::COMPONENTE EDUCACION::::: */}
       <Education />
-      {/* COMPONENTE EXPERENCIA */}
+      {/* :::::COMPONENTE EXPERENCIA::::: */}
       <Experience />
-      {/* COMPONENTE DOCUMENTOS */}
+      {/* :::::COMPONENTE DOCUMENTOS::::: */}
       <Documents />
-      {/* SOLICITAR INFORMACION */}
+      {/* :::::SOLICITAR INFORMACION::::: */}
       <BoxRequest>
         SOLICITAR INFORMACIÓN <InfoIcon color="#E25139" />
       </BoxRequest>

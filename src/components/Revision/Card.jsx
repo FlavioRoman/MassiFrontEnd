@@ -1,6 +1,8 @@
-// ICONO
+// :::::IMAGEN:::::
+import avatar01 from "../../assets/GroupBoard1.png";
+// :::::ICONO:::::
 import StarIcon from "@mui/icons-material/Star";
-// ESTILOS
+// :::::ESTILOS:::::
 import {
   Job,
   Star,
@@ -13,9 +15,7 @@ import {
   Percentage,
   ButtonProfile,
 } from "./style";
-// IMAGEN
-import avatar01 from "../../assets/GroupBoard1.png";
-// REACT ROUTER
+// :::::REACT ROUTER:::::
 import { Link } from "react-router-dom";
 
 const Card = () => {

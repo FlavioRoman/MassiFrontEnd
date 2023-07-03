@@ -9,7 +9,7 @@ import {
   styled,
   CircularProgress,
 } from "@mui/material";
-import { Container } from "../style";
+import { Section } from "../../style";
 
 const Item = styled(Paper)(({ theme }) => ({
   width: "50px",
@@ -30,7 +30,7 @@ const Item = styled(Paper)(({ theme }) => ({
 const EvaluacionForm = () => {
   const [progress, setProgress] = useState(73);
   return (
-    <Container sx={{ padding: "30px" }}>
+    <Section sx={{ padding: "30px" }}>
       <h5>Evaluación de Competencias</h5>
       <Box sx={{ marginTop: "20px" }}>
         <Grid
@@ -90,7 +90,7 @@ const EvaluacionForm = () => {
           </Grid>
         </Grid>
       </Box>
-    </Container>
+    </Section>
   );
 };
 

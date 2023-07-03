@@ -1,13 +1,5 @@
 // ESTILOS
-import {
-  Text,
-  List,
-  Item,
-  Title,
-  Article,
-  Section,
-  SubTitle,
-} from "./styleTerminoesCondiciones";
+import { Text, List, Item, Title, Article, Section, SubTitle } from "./style";
 
 const TerminosCondiciones = () => {
   return (
