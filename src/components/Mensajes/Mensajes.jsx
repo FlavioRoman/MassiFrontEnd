@@ -1,7 +1,7 @@
 // :::::IMAGEN:::::
 import Img from "../../assets/GroupBoard1.png";
 // :::::ESTILO:::::
-import { Section } from "../style";
+import { BoxChat, Section } from "../style";
 // :::::ICON:::::
 import SearchIcon from "@mui/icons-material/Search";
 // :::::MATERIAL UI:::::
@@ -14,7 +14,8 @@ import {
   Typography,
   IconButton,
 } from "@mui/material";
-import Chat from "../Global/Chat";
+// :::::COMPONENTE:::::
+import Chat from "./Chat";
 
 const Mensajes = () => {
   return (
@@ -31,16 +32,12 @@ const Mensajes = () => {
           spacing={2}
         >
           {/* :::::BUSCADOR::::: */}
-          <Grid item md={3}>
+          <Grid item xs={12} sm={12} md={3}>
             <Paper sx={{ boxShadow: "none", borderBottom: "1px solid #ddd" }}>
               <IconButton type="button" sx={{ p: "10px" }} aria-label="search">
                 <SearchIcon />
               </IconButton>
-              <InputBase
-                sx={{ ml: 1, flex: 1 }}
-                placeholder="Buscar"
-                inputProps={{ "aria-label": "search google maps" }}
-              />
+              <InputBase sx={{ ml: 1, flex: 1 }} placeholder="Buscar" />
             </Paper>
             {/* :::::LISTA DE MENSAJES */}
             <Box sx={{ overflow: "auto" }} height="70vh">
@@ -87,8 +84,10 @@ const Mensajes = () => {
             </Box>
           </Grid>
           {/* :::::MENSAJE::::: */}
-          <Grid item md={9}>
-            <Chat />
+          <Grid item xs={12} sm={12} md={9}>
+            <BoxChat sx={{ boxShadow: "none", padding: "0" }}>
+              <Chat />
+            </BoxChat>
           </Grid>
         </Grid>
       </Box>

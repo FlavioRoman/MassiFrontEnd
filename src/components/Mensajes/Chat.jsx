@@ -1,13 +1,13 @@
 // :::::ESTILOS:::::
 import {
   Boton,
-  Section,
   BotonIcono,
   BotonTexto,
   ContenedorEnviar,
+  CustomBox,
 } from "../style";
 // :::::MATERIAL UI:::::
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 // :::::ICONO:::::
 import SendIcon from "@mui/icons-material/Send";
 // :::::IMAGEN:::::

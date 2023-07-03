@@ -29,7 +29,7 @@ import { Typography } from "@mui/material";
 const Postulante = () => {
   const [progress, setProgress] = useState(73);
   return (
-    <Section>
+    <Section sx={{ padding: "0" }}>
       {/* ESTADO DE LA PERSONA */}
       <State>
         Aprobado <KeyboardArrowDownIcon />

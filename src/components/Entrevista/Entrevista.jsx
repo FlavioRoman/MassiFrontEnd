@@ -1,12 +1,11 @@
 // :::::MATERIAL UI:::::
 import { Box, Grid } from "@mui/material";
 // :::::COMPONENTES:::::
-import Chat from "../Global/Chat";
-import Estado from "../Global/Estado";
 import NotaForm from "./Formularios/NotaForm";
 import DetalleEntrevista from "./DetalleEntrevista";
 import PreguntasForm from "./Formularios/PreguntasForm";
 import EvaluacionForm from "./Formularios/EvaluacionForm";
+import Chat from "../Mensajes/Chat";
 import Perfil from "./Perfil";
 
 const Entrevista = () => {
@@ -24,8 +23,8 @@ const Entrevista = () => {
       </Box>
       <EvaluacionForm />
       <PreguntasForm />
-      <NotaForm />
       <Chat />
+      <NotaForm />
     </>
   );
 };

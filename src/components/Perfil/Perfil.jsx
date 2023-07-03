@@ -1,9 +1,10 @@
 // :::::COMPONENTES:::::
+import Chat from "../Mensajes/Chat";
 import Postulante from "./Postulante";
 import Etapa from "../Revision/Etapa";
 import Referencias from "./Referencias";
 import Informacion from "./Informacion";
-import Chat from "../Global/Chat";
+import { CustomBox, Section } from "../style";
 
 // :::::COMPONENTE PADRE:::::
 const Perfil = () => {
@@ -13,7 +14,9 @@ const Perfil = () => {
       <Postulante />
       <Informacion />
       <Referencias />
-      <Chat />
+      <CustomBox>
+        <Chat />
+      </CustomBox>
     </>
   );
 };

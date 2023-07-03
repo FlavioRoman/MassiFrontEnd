@@ -17,7 +17,7 @@ const CardEvaluacion = () => {
       }}
     >
       {/* :::::ESTADO::::: */}
-      <Estado>Aprobado</Estado>
+      <Estado sx={{ textAlign: "left" }}>Aprobado</Estado>
       {/* :::::SOBRE LA PERSONA::::: */}
       <Stack
         padding="20px"

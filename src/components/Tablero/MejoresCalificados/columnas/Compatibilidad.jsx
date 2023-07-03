@@ -1,4 +1,4 @@
-// MATERIAL UI
+// :::::MATERIAL UI:::::
 import { Typography } from "@mui/material";
 
 // :::::COMPONENTE PARA LA COLUMNA (COMPATIBILIDAD):::::

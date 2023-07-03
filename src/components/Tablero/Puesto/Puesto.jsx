@@ -34,7 +34,7 @@ const Puesto = () => {
             </Typography>
           </Grid>
           <Grid item sm={12} lg={6}>
-            <Stack direction="row" spacing={1}>
+            <Stack direction="row" justifyContent="flex-end" spacing={1}>
               <Item>Pasante</Item>
               <Item>Tiempo parcial</Item>
               <Item>Ad ho</Item>

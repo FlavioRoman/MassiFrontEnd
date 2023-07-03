@@ -16,8 +16,8 @@ import {
 // :::::ESTILOS:::::
 import { Section, Candidates, ContainerCard } from "./style";
 // :::::COMPONENTE:::::
-import Card from "./Card";
 import CardEvaluacion from "../Cards/CardEvaluacion";
+import CardPerfil from "../Cards/CardPerfil";
 
 // :::::COMPONENTE PARA EL FILTRO DE BUSQUEDA:::::
 const Filtro = () => {
@@ -101,7 +101,13 @@ const Filtro = () => {
       {/* :::::AQUI RENDERIZA LOS CANDIDATOS (APRODADOS, PENDIENTES Y NO APROBADO)::::: */}
       <ContainerCard>
         {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((value, index) => {
-          // return <Card key={index} />;
+          return <CardPerfil key={index} />;
+          // return <CardEvaluacion key={index} />;
+        })}
+      </ContainerCard>
+      <ContainerCard>
+        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((value, index) => {
+          // return <CardPerfil key={index} />;
           return <CardEvaluacion key={index} />;
         })}
       </ContainerCard>

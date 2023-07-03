@@ -4,7 +4,7 @@ import avatar02 from "../../../assets/GroupBoard2.png";
 import avatar03 from "../../../assets/GroupBoard3.png";
 import avatar04 from "../../../assets/GroupBoard4.png";
 // :::::MATERIAL UI:::::
-import { Grid, Stack, Typography } from "@mui/material";
+import { Box, Grid, Stack, Typography } from "@mui/material";
 import Perfil from "../../Global/Perfil";
 
 // :::::ARRAY DE OBJETOS PARA TESTING:::::
@@ -36,14 +36,7 @@ const EquipoTrabajo = () => {
   return (
     <>
       {/* :::::TITULO::::: */}
-      <Typography
-        sx={{
-          fontSize: "14px",
-          marginTop: "10px",
-          fontWeight: "300",
-          fontFamily: " 'Merriweather Sans', sans-serif",
-        }}
-      >
+      <Typography fontSize="14px" marginTop="10px" fontWeight="300">
         Equipo de trabajo
       </Typography>
       <Grid container direction="row">
@@ -51,18 +44,27 @@ const EquipoTrabajo = () => {
         {testing.map((value, index) => (
           <Stack
             key={index}
-            direction="column"
+            margin="10px"
+            direction="row"
             textAlign="center"
             alignItems="center"
-            sx={{ margin: "10px" }}
           >
-            <Perfil
-              foto={value.img}
-              nombre={value.name}
-              trabajo={value.job}
-              direccion={""}
-              horizontal={false}
-            />
+            {/* :::::DATOS DEL EQUIPO DE TRABAJO::::: */}
+            <Stack direction="column" alignItems="center" spacing={1}>
+              <img
+                alt="img"
+                src={value.img}
+                style={{ width: "64px", height: "64px" }}
+              />
+              <Box>
+                <Typography sx={{ fontSize: "18px", fontWeight: 400 }}>
+                  {value.name}
+                </Typography>
+                <Typography sx={{ fontSize: "14px", fontWeight: 300 }}>
+                  {value.job}
+                </Typography>
+              </Box>
+            </Stack>
           </Stack>
         ))}
       </Grid>
