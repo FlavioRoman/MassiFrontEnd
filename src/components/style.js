@@ -85,3 +85,13 @@ export const BotonTexto = styled("p")(({ theme }) => ({
 export const BotonIcono = styled("span")(({ theme }) => ({
   color: "#fff",
 }));
+
+// :::::ESTILO CIRCULO PROGRESO:::::
+export const Progress = styled("div")({
+  width: "120px",
+  display: "flex",
+  textAlign: "center",
+  alignItems: "center",
+  flexDirection: "column",
+  rowGap: "10px",
+});

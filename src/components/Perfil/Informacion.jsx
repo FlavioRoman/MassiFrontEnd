@@ -4,7 +4,7 @@ import InfoIcon from "@mui/icons-material/Info";
 import { BoxRequest, Section } from "./style";
 import { Box, Grid } from "@mui/material";
 
-export const Education = () => {
+export const Educacion = () => {
   return (
     <>
       <h5 style={{ margin: "20px 0" }}>Educación</h5>
@@ -23,7 +23,7 @@ export const Education = () => {
   );
 };
 
-export const Experience = () => {
+export const Experiencia = () => {
   return (
     <>
       <h5>Experiencia laboral</h5>
@@ -76,7 +76,7 @@ export const Experience = () => {
   );
 };
 
-export const Documents = () => {
+export const Documentos = () => {
   return (
     <>
       <Box sx={{ marginTop: "10px" }}>
@@ -97,11 +97,11 @@ const Informacion = () => {
       {/* :::::TITULO::::: */}
       <h5 style={{ margin: "20px 0" }}>Información del postulante</h5>
       {/* :::::COMPONENTE EDUCACION::::: */}
-      <Education />
+      <Educacion />
       {/* :::::COMPONENTE EXPERENCIA::::: */}
-      <Experience />
+      <Experiencia />
       {/* :::::COMPONENTE DOCUMENTOS::::: */}
-      <Documents />
+      <Documentos />
       {/* :::::SOLICITAR INFORMACION::::: */}
       <BoxRequest>
         SOLICITAR INFORMACIÓN <InfoIcon color="#E25139" />

@@ -4,7 +4,7 @@ import { Section } from "../style";
 import Puesto from "./Puesto/Puesto";
 import MejoresCalificados from "./MejoresCalificados/MejoresCalificados";
 
-// :::::COMPONENTE TABLERO EN DONDE MUESTRA LA PARTE SUPERIO (TITULO Y DEMAS) Y LA PARA INFERIOR (TABLA DE CALIFICADOS):::::
+// :::::COMPONENTE PADRE:::::
 const Tablero = () => {
   return (
     <Section>

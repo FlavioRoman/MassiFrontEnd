@@ -1,17 +1,11 @@
 // :::::ESTILOS:::::
-import {
-  Boton,
-  BotonIcono,
-  BotonTexto,
-  ContenedorEnviar,
-  CustomBox,
-} from "../style";
+import { ContenedorEnviar } from "../style";
 // :::::MATERIAL UI:::::
 import { Box } from "@mui/material";
-// :::::ICONO:::::
-import SendIcon from "@mui/icons-material/Send";
+
 // :::::IMAGEN:::::
 import ChatInit from "../../assets/chatinit.png";
+import BotonEnviar from "../../assets/chatsendbutton.png";
 // :::::LIBRERIA PARA EMOJIS:::::
 import InputEmoji from "react-input-emoji";
 
@@ -35,12 +29,15 @@ const Chat = () => {
       {/* :::::ENVIAR MENSAJE::::: */}
       <ContenedorEnviar>
         <InputEmoji cleanOnEnter placeholder="Redactar mensaje" />
-        <Boton type="button">
-          <BotonTexto>Enviar</BotonTexto>
-          <BotonIcono>
-            <SendIcon />
-          </BotonIcono>
-        </Boton>
+        <img
+          style={{
+            width: "120px",
+            display: "block",
+            cursor: "pointer",
+            margin: "5px 5px 5px auto",
+          }}
+          src={BotonEnviar}
+        />
       </ContenedorEnviar>
     </Box>
   );

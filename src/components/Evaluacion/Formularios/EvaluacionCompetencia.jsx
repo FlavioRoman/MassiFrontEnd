@@ -1,16 +1,13 @@
-// :::::HOOK:::::
-import { useState } from "react";
-// :::::EMATERIAL UI:::::
 import {
   Box,
+  CircularProgress,
   Grid,
   Paper,
   Stack,
   styled,
-  CircularProgress,
 } from "@mui/material";
-// :::::ESTILO:::::
 import { Section } from "../../style";
+import { useState } from "react";
 
 const Item = styled(Paper)({
   width: "50px",
@@ -28,8 +25,7 @@ const Item = styled(Paper)({
   },
 });
 
-// :::::COMPONENTE PARA EL FORMULARIO (EVALUACION DE COMPETENCIA):::::
-const EvaluacionForm = () => {
+const EvaluacionCompetencia = () => {
   const [progress, setProgress] = useState(73);
   return (
     <Section sx={{ padding: "30px" }}>
@@ -42,18 +38,10 @@ const EvaluacionForm = () => {
           justifyContent="center"
           spacing={2}
         >
-          <Grid item xs={12} sm={12} lg={6}>
+          <Grid item sm={12} lg={6}>
             <Box sx={{ padding: "20px 0" }}>
-              <h4 style={{ fontWeight: "900" }}>
-                1. Habilidades comunicativas
-              </h4>
-              <Stack
-                gap="5px"
-                spacing={2}
-                flexWrap="wrap"
-                direction="row"
-                sx={{ marginTop: "10px" }}
-              >
+              <h4 style={{ fontWeight: "900" }}>1. MS-Word</h4>
+              <Stack direction="row" spacing={2} sx={{ marginTop: "10px" }}>
                 <Item>1</Item>
                 <Item>2</Item>
                 <Item>3</Item>
@@ -64,32 +52,8 @@ const EvaluacionForm = () => {
               </Stack>
             </Box>
             <Box sx={{ padding: "20px 0" }}>
-              <h4 style={{ fontWeight: "900" }}>2. Resolución de problemas</h4>
-              <Stack
-                gap="5px"
-                flexWrap="wrap"
-                direction="row"
-                spacing={2}
-                sx={{ marginTop: "10px" }}
-              >
-                <Item>1</Item>
-                <Item>2</Item>
-                <Item>3</Item>
-                <Item>4</Item>
-                <Item>5</Item>
-                <Item>6</Item>
-                <Item>7</Item>
-              </Stack>
-            </Box>
-            <Box sx={{ padding: "20px 0" }}>
-              <h4 style={{ fontWeight: "900" }}>3. Trabajo en equipo</h4>
-              <Stack
-                gap="5px"
-                flexWrap="wrap"
-                direction="row"
-                spacing={2}
-                sx={{ marginTop: "10px" }}
-              >
+              <h4 style={{ fontWeight: "900" }}>2. MS-Excel</h4>
+              <Stack direction="row" spacing={2} sx={{ marginTop: "10px" }}>
                 <Item>1</Item>
                 <Item>2</Item>
                 <Item>3</Item>
@@ -114,4 +78,4 @@ const EvaluacionForm = () => {
   );
 };
 
-export default EvaluacionForm;
+export default EvaluacionCompetencia;

@@ -1,30 +1,36 @@
 // :::::MATERIAL UI:::::
-import { Box, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 // :::::COMPONENTES:::::
+import Perfil from "./Perfil";
+import Chat from "../Mensajes/Chat";
 import NotaForm from "./Formularios/NotaForm";
 import DetalleEntrevista from "./DetalleEntrevista";
 import PreguntasForm from "./Formularios/PreguntasForm";
 import EvaluacionForm from "./Formularios/EvaluacionForm";
-import Chat from "../Mensajes/Chat";
-import Perfil from "./Perfil";
+// :::::ESTILO:::::
+import { CustomBox, Section } from "../style";
 
+// :::::COMPONENTE PADRE DE ESTA LA CARPETA (Entrevista):::::
 const Entrevista = () => {
   return (
     <>
-      <Box>
-        <Grid container direction="row">
-          <Grid item sm={12} lg={6}>
+      <Section sx={{ boxShadow: "none", padding: "0" }}>
+        <Grid container direction="row" spacing={2}>
+          <Grid item sm={12} lg={4}>
             <Perfil />
           </Grid>
-          <Grid item sm={12} lg={6}>
+          <Grid item sm={12} lg={8}>
             <DetalleEntrevista />
           </Grid>
         </Grid>
-      </Box>
+      </Section>
+      {/* ::::COMPONENTES FORMULARIOS::::: */}
       <EvaluacionForm />
       <PreguntasForm />
-      <Chat />
       <NotaForm />
+      <CustomBox>
+        <Chat />
+      </CustomBox>
     </>
   );
 };

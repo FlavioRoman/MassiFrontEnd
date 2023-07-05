@@ -1,24 +1,21 @@
-// :::::ESTILO:::::
+import { Box, styled } from "@mui/material";
 import { Section } from "../../style";
+import TextareaAutosize from "@mui/base/TextareaAutosize";
 // :::::IMAGENES:::::
 import BotonGuardar from "../../../assets/savebutton2.png";
-// :::::MATERIAL UI:::::
-import { Box, styled } from "@mui/material";
-import TextareaAutosize from "@mui/base/TextareaAutosize";
 
 // :::::ESTILO PARA EL TEXTAREA:::::
 const StyledTextarea = styled(TextareaAutosize)(
   () => `
-      width: 100%;
-      font-size: 0.875rem;
-      font-weight: 400;
-      line-height: 1.5;
-      padding: 12px;
-    `
+        width: 100%;
+        font-size: 0.875rem;
+        font-weight: 400;
+        line-height: 1.5;
+        padding: 12px;
+      `
 );
 
-// :::::COMPONENTE PARA EL FORMULARIO DE (NOTA DE ENTREVISTA):::::
-const NotaForm = () => {
+const NotaEvaluacion = () => {
   return (
     <Section sx={{ padding: "30px" }}>
       <h5>Notas de la entrevista</h5>
@@ -42,4 +39,4 @@ const NotaForm = () => {
   );
 };
 
-export default NotaForm;
+export default NotaEvaluacion;

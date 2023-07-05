@@ -16,6 +16,7 @@ import TerminosCondiciones from "./components/terminosCondiciones/TerminosCondic
 
 // ESTILO
 import "./App.css";
+import Evaluacion from "./components/Evaluacion/Evaluacion";
 
 function App() {
   return (
@@ -39,8 +40,9 @@ function App() {
           <Route path="tablero" element={<Tablero />} />
           <Route path="revision" element={<Revision />} />
           <Route path="perfil" element={<Perfil />} />
-          <Route path="entrevista" element={<Entrevista />} />
           <Route path="mensajes" element={<Mensajes />} />
+          <Route path="entrevista" element={<Entrevista />} />
+          <Route path="evaluacion" element={<Evaluacion />} />
           <Route path="terminosCondiciones" element={<TerminosCondiciones />} />
           <Route path="políticasPrivacidad" element={<PoliticaPrivacidad />} />
         </Route>

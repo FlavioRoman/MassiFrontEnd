@@ -4,6 +4,7 @@ import Image01 from "../../assets/Vector.png";
 
 import { styled } from "@mui/material";
 
+// :::::ESTILO PARA EL SIDEBAR:::::
 export const Aside = styled("aside")(({ theme }) => ({
   position: "fixed",
   top: 0,

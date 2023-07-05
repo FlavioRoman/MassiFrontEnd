@@ -34,25 +34,27 @@ const DetalleForm = () => {
   };
 
   return (
-    <Section>
+    <Box
+      padding="20px"
+      borderRadius="20px"
+      boxShadow="0 3px 10px rgb(0 0 0 / 0.2)"
+    >
       {/* :::::TITULO::::: */}
       <Box>
-        <Typography sx={{ fontSize: "16px", fontWeight: 300 }}>
+        <Typography fontSize="16px" fontWeight="300">
           Detalle Entrevista
         </Typography>
-        <Typography
-          sx={{ fontSize: "14px", fontWeight: 300, marginTop: "20px" }}
-        >
+        <Typography fontSize="14px" fontWeight="300" marginTop="20px">
           Este puesto requiere de individuos con habilidades comunicativas bien
           desarrolladas, que sean capaces de resolver problemas sobre la marcha
           y que sean team players. Esta entrevista pretende determinar estas
           tres habilidades.
         </Typography>
       </Box>
-      <Box sx={{ marginTop: "30px" }}>
+      <Box marginTop="30px">
         <Grid container>
-          <Grid item sm={6}>
-            <Typography sx={{ fontSize: "12px", fontWeight: 300 }}>
+          <Grid item xs={12} sm={6}>
+            <Typography fontSize="12px" fontWeight="300">
               A cargo de:
             </Typography>
             <Perfil
@@ -62,9 +64,8 @@ const DetalleForm = () => {
               direccion={""}
             />
           </Grid>
-          <Grid item sm={6}>
+          <Grid item xs={12} sm={6}>
             {/* :::::SELECCIONAR MODALIDAD::::: */}
-
             <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
               <InputLabel id="demo-simple-select-standard-label">
                 Modalidad
@@ -106,7 +107,7 @@ const DetalleForm = () => {
           </Grid>
         </Grid>
       </Box>
-    </Section>
+    </Box>
   );
 };
 
