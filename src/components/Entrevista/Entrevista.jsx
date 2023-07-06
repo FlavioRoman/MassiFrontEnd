@@ -3,6 +3,7 @@ import { Grid } from "@mui/material";
 // :::::COMPONENTES:::::
 import Perfil from "./Perfil";
 import Chat from "../Mensajes/Chat";
+import Etapa from "../Revision/Etapa";
 import NotaForm from "./Formularios/NotaForm";
 import DetalleEntrevista from "./DetalleEntrevista";
 import PreguntasForm from "./Formularios/PreguntasForm";
@@ -14,6 +15,7 @@ import { CustomBox, Section } from "../style";
 const Entrevista = () => {
   return (
     <>
+      <Etapa />
       <Section sx={{ boxShadow: "none", padding: "0" }}>
         <Grid container direction="row" spacing={2}>
           <Grid item sm={12} lg={4}>

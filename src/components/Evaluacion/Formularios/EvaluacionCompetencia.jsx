@@ -41,7 +41,12 @@ const EvaluacionCompetencia = () => {
           <Grid item sm={12} lg={6}>
             <Box sx={{ padding: "20px 0" }}>
               <h4 style={{ fontWeight: "900" }}>1. MS-Word</h4>
-              <Stack direction="row" spacing={2} sx={{ marginTop: "10px" }}>
+              <Stack
+                spacing={2}
+                direction="row"
+                flexWrap="wrap"
+                sx={{ marginTop: "10px" }}
+              >
                 <Item>1</Item>
                 <Item>2</Item>
                 <Item>3</Item>
@@ -53,7 +58,12 @@ const EvaluacionCompetencia = () => {
             </Box>
             <Box sx={{ padding: "20px 0" }}>
               <h4 style={{ fontWeight: "900" }}>2. MS-Excel</h4>
-              <Stack direction="row" spacing={2} sx={{ marginTop: "10px" }}>
+              <Stack
+                flexWrap="wrap"
+                direction="row"
+                spacing={2}
+                sx={{ marginTop: "10px" }}
+              >
                 <Item>1</Item>
                 <Item>2</Item>
                 <Item>3</Item>

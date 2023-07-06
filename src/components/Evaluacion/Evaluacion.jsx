@@ -1,7 +1,9 @@
 // :::::MATERIAL UI:::::
 import { Grid } from "@mui/material";
 // :::::ESTILO:::::
-import { CustomBox, Section } from "../style";
+import { Section } from "../style";
+// :::::COMPONENTE:::::
+import Etapa from "../Revision/Etapa";
 import PerfilEvaluacion from "./PerfilEvaluacion";
 import DetalleEvaluacion from "./DetalleEvaluacion";
 import NotaEvaluacion from "./Formularios/NotaEvaluacion";
@@ -11,6 +13,7 @@ import EvaluacionCompetencia from "./Formularios/EvaluacionCompetencia";
 const Evaluacion = () => {
   return (
     <>
+      <Etapa />
       <Section sx={{ boxShadow: "none", padding: "0" }}>
         <Grid container direction="row" spacing={2}>
           <Grid item xs={12} sm={12} lg={4}>

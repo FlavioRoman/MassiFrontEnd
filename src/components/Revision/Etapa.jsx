@@ -21,8 +21,8 @@ import { Link } from "react-router-dom";
 const etapas = [
   { text: "Revisión de documentos", bgColor: "#055B5A", path: "#" },
   { text: "Entrevista 1", bgColor: "#E25139", path: "/revision" },
-  { text: "Evaluación", bgColor: "#F9B438", path: "#" },
-  { text: "Entrevista 2", bgColor: "#7659A0", path: "#" },
+  { text: "Evaluación", bgColor: "#F9B438", path: "/evaluacion" },
+  { text: "Entrevista 2", bgColor: "#7659A0", path: "/entrevista" },
   { text: "Decisión Final", bgColor: "#055B5A", path: "#" },
 ];
 
