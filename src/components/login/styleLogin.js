@@ -45,10 +45,10 @@ export const Content = styled("article")(({ theme }) => ({
   },
 }));
 
-export const Logo = styled("img")(({ theme }) => ({
+export const Logo = styled("img")({
   margin: "auto",
   maxWidth: "500px",
-}));
+});
 
 export const Welcome = styled("div")({
   margin: "50px 0",

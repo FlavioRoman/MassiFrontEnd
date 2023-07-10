@@ -1,13 +1,13 @@
 // :::::MATERIAL UI:::::
 import { Grid } from "@mui/material";
 // :::::COMPONENTES:::::
-import Perfil from "./Perfil";
 import Chat from "../Mensajes/Chat";
 import Etapa from "../Revision/Etapa";
-import NotaForm from "./Formularios/NotaForm";
+import Perfil from "./PerfilEntrevista";
+import NotaForm from "./Formularios/Nota";
 import DetalleEntrevista from "./DetalleEntrevista";
-import PreguntasForm from "./Formularios/PreguntasForm";
-import EvaluacionForm from "./Formularios/EvaluacionForm";
+import PreguntasForm from "./Formularios/Preguntas";
+import EvaluacionForm from "./Formularios/Evaluacion";
 // :::::ESTILO:::::
 import { CustomBox, Section } from "../style";
 
